@@ -1,11 +1,10 @@
 import React from "react";
-import { Navbar, Carousel } from "./components/index";
+import { Navbar } from "./components/index";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Carousel />
     </div>
   );
 };
