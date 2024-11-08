@@ -1,26 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Testimonial } from ".";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  let lastScrollY = 0; // Variable to store last scroll position
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY) {
+      setIsNavbarVisible(false);
+    } else {
+      setIsNavbarVisible(true);
+    }
+    lastScrollY = window.scrollY;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const Menu = [
     { id: 1, name: "Home", path: "#" },
     { id: 2, name: "Services", path: "#services" },
     { id: 3, name: "About", path: "#about" },
     { id: 4, name: "Testimonial", path: "#testimonial" },
-    { id: 4, name: "Contact", path: "#contact" },
+    { id: 5, name: "Contact", path: "#contact" },
   ];
 
   return (
     <div>
-      {/* Navbar */}
-      <nav className="bg-transparent py-4 px-8 fixed top-0 left-0 w-full z-20">
+      <nav
+        className={`bg-transparent py-4 px-8 fixed top-0 left-0 w-full z-20 transition-transform duration-300 ${
+          isNavbarVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <div className="text-white font-bold text-xl">
             <a href="#">
               <img
@@ -31,7 +52,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {Menu.map((item) => (
               <a
@@ -44,7 +64,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
             className="md:hidden text-white focus:outline-none"
             onClick={toggleMenu}
@@ -71,7 +90,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Popup as a Card (Aligned to Top-Right) */}
       {isMenuOpen && (
         <div className="fixed top-0 right-0 z-30 flex items-start justify-end">
           <div className="bg-black bg-opacity-80 rounded-lg p-6 w-64 text-white text-center shadow-lg relative">
@@ -141,6 +159,7 @@ const Navbar = () => {
           </div>
         </div>
       </section>
+      <Testimonial />
     </div>
   );
 };

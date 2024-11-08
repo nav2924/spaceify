@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "./components/index";
+import { Navbar, Testimonial } from "./components/index";
 
 const App = () => {
   return (
