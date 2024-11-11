@@ -3,7 +3,7 @@ import "../index.css";
 
 function ServicesPage({ services }) {
   return (
-    <div>
+    <div id="services">
       {services.map((service, index) => (
         <div
           key={index}
