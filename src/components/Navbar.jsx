@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Testimonial } from ".";
+import { Testimonial, Clients, Services } from "./index";
+import "../index.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,6 +59,7 @@ const Navbar = () => {
                 key={item.id}
                 href={item.path}
                 className="text-white hover:text-gray-400"
+                style={{ fontFamily: "SF Pro" }}
               >
                 {item.name}
               </a>
@@ -146,8 +148,8 @@ const Navbar = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full text-center text-white">
           <div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">Spaceify</h1>
-            <p className="text-lg sm:text-xl mb-6">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4 " style={{ fontFamily: "SF Pro" }}>Spaceify</h1>
+            <p className="text-lg sm:text-xl mb-6" >
               Construction solutions simplified
             </p>
             <a
@@ -159,6 +161,8 @@ const Navbar = () => {
           </div>
         </div>
       </section>
+      <Services />
+      <Clients />
       <Testimonial />
     </div>
   );
