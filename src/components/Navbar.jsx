@@ -141,6 +141,7 @@ const Navbar = () => {
           loop
           muted
           className="w-full h-full object-cover absolute inset-0"
+          data-lazy-video
         >
           <source src="/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
