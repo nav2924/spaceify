@@ -142,14 +142,19 @@ const Navbar = () => {
           muted
           className="w-full h-full object-cover absolute inset-0"
         >
-          <source src="/videoplayback.mp4" type="video/mp4" />
+          <source src="/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full text-center text-white">
           <div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4 " style={{ fontFamily: "SF Pro" }}>Spaceify</h1>
-            <p className="text-lg sm:text-xl mb-6" >
+            <h1
+              className="text-4xl sm:text-5xl font-bold mb-4 "
+              style={{ fontFamily: "SF Pro" }}
+            >
+              Spaceify
+            </h1>
+            <p className="text-lg sm:text-xl mb-6">
               Construction solutions simplified
             </p>
             <a
