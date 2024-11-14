@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Testimonial, Clients, Services } from "./index";
+import { Testimonial, Clients, Services, About } from "./index";
 import "../index.css";
 
 const Navbar = () => {
@@ -167,6 +167,7 @@ const Navbar = () => {
           </div>
         </div>
       </section>
+      <About />
       <Services />
       <Clients />
       <Testimonial />
