@@ -39,7 +39,7 @@ const About = () => {
           <div class="mx-auto max-w-7xl px-3 sm:px-3 lg:px-8">
             <div class="flex flex-col gap-10 xl:gap-14 lg:flex-row lg:justify-between">
               <div class="w-full lg:w-1/3 ">
-                <div class="font-manrope font-bold text-5xl text-indigo-400 mb-6 text-center ">
+                <div class="font-manrope font-bold text-5xl text-indigo-200 mb-6 text-center ">
                   500
                 </div>
                 <p class="text-lg text-gray-500 leading-7 text-center">
@@ -47,7 +47,7 @@ const About = () => {
                 </p>
               </div>
               <div class="w-full lg:w-1/3 ">
-                <div class="font-manrope font-bold text-5xl text-indigo-400 mb-6 text-center ">
+                <div class="font-manrope font-bold text-5xl text-indigo-200 mb-6 text-center ">
                   1200+
                 </div>
                 <p class="text-lg text-gray-500 leading-7 text-center">
@@ -55,7 +55,7 @@ const About = () => {
                 </p>
               </div>
               <div class="w-full lg:w-1/3 ">
-                <div class="font-manrope font-bold text-5xl text-indigo-400 mb-6 text-center ">
+                <div class="font-manrope font-bold text-5xl text-indigo-200 mb-6 text-center ">
                   30+
                 </div>
                 <p class="text-lg text-gray-500 leading-7 text-center">
