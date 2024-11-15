@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import GradualSpacing from "./ui/gradual-spacing";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
 
+const stats = [
+  { id: 1, value: "500", title: "Properties Sold" },
+  { id: 2, value: "1200+", title: "Happy Clients" },
+  { id: 3, value: "30+", title: "Cities Covered" },
+];
 const About = () => {
+  const [scrollCounterOn, setScrollCounterOn] = useState(false);
+
   return (
     <section id="about">
       <div className="bg-gradient-to-b from-[hsl(229,64%,12%)] to-[hsl(229,64%,20%)] text-white min-h-screen flex flex-col items-center px-6 py-10">
@@ -12,7 +21,6 @@ const About = () => {
             text="About Us"
           />
         </div>
-
         {/* Content */}
         <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-10 w-full max-w-5xl px-4">
           <img
@@ -33,38 +41,40 @@ const About = () => {
             </p>
           </div>
         </div>
-
         {/* Stats */}
-        <section class="py-20">
-          <div class="mx-auto max-w-7xl px-3 sm:px-3 lg:px-8">
-            <div class="flex flex-col gap-10 xl:gap-14 lg:flex-row lg:justify-between">
-              <div class="w-full lg:w-1/3 ">
-                <div class="font-manrope font-bold text-5xl text-indigo-200 mb-6 text-center ">
-                  500
-                </div>
-                <p class="text-lg text-gray-500 leading-7 text-center">
-                  Properties Sold
-                </p>
+        <section className="py-20">
+      <ScrollTrigger
+        onEnter={() => setScrollCounterOn(true)}
+        onExit={() => setScrollCounterOn(false)}
+      >
+        <div className="flex justify-center items-center gap-10 overflow-x-auto">
+          {stats.map((stat) => {
+            const hasPlus = stat.value.includes("+");
+            const numericValue = parseInt(stat.value.replace(/\D/g, ""), 10);
+
+            return (
+              <div
+                key={stat.id}
+                className="flex flex-col justify-center items-center text-center min-w-[150px]"
+              >
+                <h4 className="font-manrope font-bold text-5xl text-indigo-200 mb-2">
+                  {scrollCounterOn && (
+                    <CountUp
+                      start={0}
+                      end={numericValue}
+                      duration={2.5}
+                      delay={0.2}
+                    />
+                  )}
+                  {hasPlus && "+"}
+                </h4>
+                <p className="text-lg text-gray-500 leading-7">{stat.title}</p>
               </div>
-              <div class="w-full lg:w-1/3 ">
-                <div class="font-manrope font-bold text-5xl text-indigo-200 mb-6 text-center ">
-                  1200+
-                </div>
-                <p class="text-lg text-gray-500 leading-7 text-center">
-                  Happy Clients
-                </p>
-              </div>
-              <div class="w-full lg:w-1/3 ">
-                <div class="font-manrope font-bold text-5xl text-indigo-200 mb-6 text-center ">
-                  30+
-                </div>
-                <p class="text-lg text-gray-500 leading-7 text-center">
-                  Cities Covered
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+            );
+          })}
+        </div>
+      </ScrollTrigger>
+    </section>
       </div>
     </section>
   );
