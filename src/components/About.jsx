@@ -43,38 +43,43 @@ const About = () => {
         </div>
         {/* Stats */}
         <section className="py-20">
-      <ScrollTrigger
-        onEnter={() => setScrollCounterOn(true)}
-        onExit={() => setScrollCounterOn(false)}
-      >
-        <div className="flex justify-center items-center gap-10 overflow-x-auto">
-          {stats.map((stat) => {
-            const hasPlus = stat.value.includes("+");
-            const numericValue = parseInt(stat.value.replace(/\D/g, ""), 10);
+          <ScrollTrigger
+            onEnter={() => setScrollCounterOn(true)}
+            onExit={() => setScrollCounterOn(false)}
+          >
+            <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 px-4 md:px-10 lg:px-20">
+              {stats.map((stat) => {
+                const hasPlus = stat.value.includes("+");
+                const numericValue = parseInt(
+                  stat.value.replace(/\D/g, ""),
+                  10
+                );
 
-            return (
-              <div
-                key={stat.id}
-                className="flex flex-col justify-center items-center text-center min-w-[150px]"
-              >
-                <h4 className="font-manrope font-bold text-5xl text-indigo-200 mb-2">
-                  {scrollCounterOn && (
-                    <CountUp
-                      start={0}
-                      end={numericValue}
-                      duration={2.5}
-                      delay={0.2}
-                    />
-                  )}
-                  {hasPlus && "+"}
-                </h4>
-                <p className="text-lg text-gray-500 leading-7">{stat.title}</p>
-              </div>
-            );
-          })}
-        </div>
-      </ScrollTrigger>
-    </section>
+                return (
+                  <div
+                    key={stat.id}
+                    className="flex flex-col justify-center items-center text-center w-1/2 md:w-1/3 lg:w-1/4"
+                  >
+                    <h4 className="font-manrope font-bold text-4xl sm:text-5xl text-indigo-200 mb-2">
+                      {scrollCounterOn && (
+                        <CountUp
+                          start={0}
+                          end={numericValue}
+                          duration={2.5}
+                          delay={0.2}
+                        />
+                      )}
+                      {hasPlus && "+"}
+                    </h4>
+                    <p className="text-base sm:text-lg text-gray-500 leading-6 sm:leading-7">
+                      {stat.title}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollTrigger>
+        </section>
       </div>
     </section>
   );
