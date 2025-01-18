@@ -26,9 +26,6 @@ const Clients = ({ images = defaultImages }) => {
             tailored advice to responsive assistance, we support you at every
             stage.
           </p>
-          <button className="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">
-            Get Started
-          </button>
         </div>
 
         <div className="lg:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-6 border border-background rounded-lg p-20">
