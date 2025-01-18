@@ -30,13 +30,13 @@ const Clients = () => {
       altText: "ayroui",
       link: "#",
     },
-    {
-      imageSrc: "/icons/ghati_movers.png",
-      lightImageSrc:
-        "https://cdn.tailgrids.com/2.2/assets/images/brands/ayroui-white.svg",
-      altText: "ayroui",
-      link: "#",
-    },
+    // {
+    //   imageSrc: "/icons/ghati_movers.png",
+    //   lightImageSrc:
+    //     "https://cdn.tailgrids.com/2.2/assets/images/brands/ayroui-white.svg",
+    //   altText: "ayroui",
+    //   link: "#",
+    // },
   ];
 
   const brandsData2 = [
