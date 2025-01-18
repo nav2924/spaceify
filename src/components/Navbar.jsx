@@ -46,9 +46,9 @@ const Navbar = () => {
           <div className="text-white font-bold text-xl">
             <a href="#">
               <img
-                src="/logo.png"
+                src="/logo_bg.png"
                 alt="Logo"
-                className="h-24 w-32 rounded-lg"
+                className="h-28 w-40 rounded-lg"
               />
             </a>
           </div>
