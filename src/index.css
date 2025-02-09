@@ -47,3 +47,30 @@
   font-style: normal;
 }
 
+
+@keyframes spin-fast {
+  from {
+    transform: translateX(-50%) translateX(7px) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) translateX(7px) rotate(360deg);
+  }
+}
+
+@keyframes spin-fast-reverse {
+  from {
+    transform: translateX(50%) translateX(-7px) rotate(0deg);
+  }
+  to {
+    transform: translateX(50%) translateX(-7px) rotate(-360deg);
+  }
+}
+
+.animate-spin-fast {
+  animation: spin-fast 0.65s linear infinite;
+}
+
+.animate-spin-fast-reverse {
+  animation: spin-fast-reverse 0.65s linear infinite reverse;
+}
+

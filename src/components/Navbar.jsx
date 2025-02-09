@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Testimonial, Clients, Services, About, Contact } from "./index";
-import { FaSpinner } from "react-icons/fa"; 
+import Loader from "./ui/Loader";
 import "../index.css";
 
 const Navbar = () => {
@@ -105,7 +105,7 @@ const Navbar = () => {
       {/* Loader Animation (Before Video Loads) */}
       {!videoLoaded && (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black text-white z-50">
-          <FaSpinner className="animate-spin text-4xl mb-2" /> {/* Rotating Icon */}
+          <Loader className="bg-white" /> {/* Rotating Icon */}
           <p className="text-lg">Loading...</p>
         </div>
       )}
