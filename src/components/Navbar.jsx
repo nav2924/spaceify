@@ -4,6 +4,7 @@ import "../index.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
   let lastScrollY = 0; // Variable to store last scroll position
 
@@ -136,16 +137,28 @@ const Navbar = () => {
 
       {/* Hero Section with Video */}
       <section className="relative w-full h-screen overflow-hidden">
+        {/* Loader - Show until video loads */}
+        {!videoLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black">
+            <p className="text-white text-lg">Loading...</p>
+          </div>
+        )}
+
+        {/* Background Video */}
         <video
           autoPlay
           loop
           muted
-          className="w-full h-full object-cover absolute inset-0"
+          className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-500 ${
+            videoLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoadedData={() => setVideoLoaded(true)}
           data-lazy-video
         >
           <source src="/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full text-center text-white">
           <div>
