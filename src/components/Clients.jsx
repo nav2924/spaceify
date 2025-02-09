@@ -1,48 +1,58 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
+import { LineShadowText } from "./magicui/line-shadow-text";
 
-// Default placeholder images
-const defaultImages = [
+const logos = [
   "icons/arcana.png",
   "icons/aster-logo.png",
   "icons/shahi.png",
   "icons/samsung.png",
   "icons/blackstone-logo.png",
   "icons/sparsh.png",
+  "icons/siemens.png",
+  "icons/goldman.png",
+  "icons/xoxoday.png",
 ];
 
-const Clients = ({ images = defaultImages }) => {
+const Clients = () => {
+  const theme = useTheme();
+  const shadowColor = "white";
   return (
     <section className="bg-dark py-16">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between">
-        <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 border border-background rounded-lg p-20">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            They Trusted Us
-          </h2>
-          <p className="text-gray-400 mb-10">
-            Our goal is to streamline the real estate journey. Through
-            data-powered insights and cutting-edge technology, we equip our
-            clients with the tools they need to make confident choices—whether
-            they're purchasing, selling, or investing in real estate. From
-            tailored advice to responsive assistance, we support you at every
-            stage.
-          </p>
-        </div>
+      <h2 className="text-balance  font-semibold leading-none text-white tracking-tighter  text-6xl flex items-center justify-center p-10 gap-x-2">
+        Our Valuable{   }
+        <LineShadowText className="italic" shadowColor={shadowColor}>
+          Clients
+        </LineShadowText>
+      </h2>
+      <div className="max-w-xl mx-auto  bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 shadow-lg rounded-2xl p-6 border border-gray-200">
+        <p className="text-gray-600 text-center">
+          Our goal is to streamline the real estate journey. Through
+          data-powered insights and cutting-edge technology, we equip our
+          clients with the tools they need to make confident choices—whether
+          they're purchasing, selling, or investing in real estate. From
+          tailored advice to responsive assistance, we support you at every
+          stage.
+        </p>
+      </div>
 
-        <div className="lg:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-6 border border-background rounded-lg p-20">
-          {images.map((image, index) => (
-            <div
+      <div className="relative overflow-hidden bg-background py-12">
+        <motion.div
+          className="flex w-max space-x-8"
+          initial={{ x: 0 }}
+          animate={{ x: "-50%" }}
+          transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+        >
+          {[...logos, ...logos].map((logo, index) => (
+            <img
               key={index}
-              className="flex justify-center items-center bg-gray-800 p-4 rounded-lg shadow-md border border-gray-700 hover:scale-105 transform transition duration-500"
-            >
-              <img
-                src={image}
-                alt={`Client ${index + 1}`}
-                aria-label={`Logo of Client ${index + 1}`}
-                className="h-auto w-auto"
-              />
-            </div>
+              src={logo}
+              alt="logo"
+              className="h-16 w-auto object-contain"
+            />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
