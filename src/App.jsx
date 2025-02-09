@@ -5,6 +5,7 @@ const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 4,
+
     });
     function raf(time) {
       lenis.raf(time);
