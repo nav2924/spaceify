@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Testimonial, Clients, Services, About, Contact } from "./index";
 import Loader from "./ui/Loader";
 import "../index.css";
+import Enquiry from "./Enquiry";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
-  let lastScrollY = 0; 
+  let lastScrollY = 0;
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -30,7 +31,8 @@ const Navbar = () => {
     { id: 2, name: "Services", path: "#services" },
     { id: 3, name: "About", path: "#about" },
     { id: 4, name: "Testimonial", path: "#testimonial" },
-    { id: 5, name: "Contact", path: "#contact" },
+    { id: 5, name: "Enquiry", path: "#enquiry" },
+    { id: 6, name: "Contact", path: "#contact" },
   ];
 
   return (
@@ -43,7 +45,11 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center">
           <a href="#" className="text-white font-bold text-xl">
-            <img src="/logo_bg.png" alt="Logo" className="h-28 w-40 rounded-lg" />
+            <img
+              src="/logo_bg.png"
+              alt="Logo"
+              className="h-28 w-40 rounded-lg"
+            />
           </a>
 
           <div className="hidden md:flex space-x-8">
@@ -60,12 +66,21 @@ const Navbar = () => {
           </div>
 
           <button className="md:hidden text-white" onClick={toggleMenu}>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                d={
+                  isMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
               ></path>
             </svg>
           </button>
@@ -80,8 +95,18 @@ const Navbar = () => {
               onClick={toggleMenu}
               className="absolute top-3 right-3 text-gray-300 hover:text-gray-500"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
               </svg>
             </button>
 
@@ -128,11 +153,19 @@ const Navbar = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full text-center text-white">
           <div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4" style={{ fontFamily: "SF Pro" }}>
+            <h1
+              className="text-4xl sm:text-5xl font-bold mb-4"
+              style={{ fontFamily: "SF Pro" }}
+            >
               Spaceify
             </h1>
-            <p className="text-lg sm:text-xl mb-6">Construction solutions simplified</p>
-            <a href="#services" className="bg-background text-white py-3 px-6 rounded-full hover:bg-gray-700 transition">
+            <p className="text-lg sm:text-xl mb-6">
+              Construction solutions simplified
+            </p>
+            <a
+              href="#services"
+              className="bg-background text-white py-3 px-6 rounded-full hover:bg-gray-700 transition"
+            >
               Get Started
             </a>
           </div>
@@ -147,6 +180,7 @@ const Navbar = () => {
           <Clients />
           <Testimonial />
           <Contact />
+          <Enquiry />
         </div>
       )}
     </div>

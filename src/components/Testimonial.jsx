@@ -1,6 +1,5 @@
 import React from "react";
 
-// Reusable Testimonial Card Component
 const TestimonialCard = ({ name, profession, image, testimonial }) => {
   return (
     <div className="space-y-8">
@@ -9,11 +8,6 @@ const TestimonialCard = ({ name, profession, image, testimonial }) => {
         <a href="#" className="cursor-pointer">
           <div className="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
             <div className="flex items-center space-x-4">
-              <img
-                src={image}
-                className="w-12 h-12 bg-center bg-cover border rounded-full"
-                alt={name}
-              />
               <div>
                 <h3 className="text-lg font-semibold text-white">{name}</h3>
                 <p className="text-gray-500 text-md">{profession}</p>
@@ -33,47 +27,27 @@ const Testimonial = () => {
   // Data for testimonials
   const testimonials = [
     {
-      name: "Rajesh Kumar",
-      profession: "Project Manager, ABC Construction",
-      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      name: "Pearl Dsouza",
+      profession: "Senior HR, Cartesian Consulting",
+      image: "https://randomuser.me/api/portraits/women/7.jpg",
       testimonial:
-        "The team at Spaceify helped us streamline our construction project, making it more efficient and within budget.",
+        "Working with Spaceify was a game-changer in finding the perfect office space for our team. They understood our needs, respected our culture, and delivered a workspace that fosters creativity and productivity. Highly recommended!",
     },
     {
-      name: "Priya Sharma",
-      profession: "Architect, Dwell Build",
-      image: "https://randomuser.me/api/portraits/women/2.jpg",
+      name: "Swaja Bajaj",
+      profession: "Senior HR, Blitz",
+      image: "https://randomuser.me/api/portraits/women/8.jpg",
       testimonial:
-        "Their innovative solutions in design and construction have been invaluable for our ongoing projects.",
+        "Thank you for helping us find the ideal office space! Spaceify's team was professional, supportive, and made the process smooth and stress-free. We truly appreciated the attention to detail and dedication throughout.",
     },
     {
-      name: "Amit Verma",
-      profession: "Civil Engineer, Sharma Builders",
-      image: "https://randomuser.me/api/portraits/men/3.jpg",
+      name: "Suraj Sharma",
+      profession: "Senior Admin and Facilities, Xoxoday",
+      image: "https://randomuser.me/api/portraits/men/9.jpg",
       testimonial:
-        "Spaceify provided us with exceptional support during the construction process. Their expertise is unmatched.",
+        "Partnering with Spaceify completely transformed our office space search. They guided us every step of the way and helped us secure a workspace that fits our brand and team culture perfectly.",
     },
-    {
-      name: "Neha Desai",
-      profession: "Interior Designer, Casa Interiors",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-      testimonial:
-        "I highly recommend Spaceify for their attention to detail and commitment to delivering quality work on time.",
-    },
-    {
-      name: "Vikas Patel",
-      profession: "Construction Supervisor, Elite Constructions",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-      testimonial:
-        "Spaceify made the construction process smoother, keeping us on track with our timelines and goals.",
-    },
-    {
-      name: "Sonia Mehta",
-      profession: "Urban Planner, Green Spaces",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-      testimonial:
-        "Spaceify’s approach to sustainable and eco-friendly building practices has greatly benefited our projects.",
-    },
+    
   ];
 
   return (
@@ -100,7 +74,6 @@ const Testimonial = () => {
               key={index}
               name={testimonial.name}
               profession={testimonial.profession}
-              image={testimonial.image}
               testimonial={testimonial.testimonial}
             />
           ))}
