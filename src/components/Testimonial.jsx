@@ -31,21 +31,21 @@ const Testimonial = () => {
       profession: "Senior HR, Cartesian Consulting",
       image: "https://randomuser.me/api/portraits/women/7.jpg",
       testimonial:
-        "Working with Spaceify was a game-changer in finding the perfect office space for our team. They understood our needs, respected our culture, and delivered a workspace that fosters creativity and productivity. Highly recommended!",
+        "Working with Spaceify was an absolute game-changer in finding the perfect office space for our team. Their expertise and dedication made the entire process seamless, from identifying our specific needs to presenting us with ideal options. They took the time to understand our company culture and ensured we found a location that aligns perfectly with our vision. Thanks to Spaceify, we now have an office that fosters creativity and productivity. Highly recommend their services to anyone in search of the ideal workspace!",
     },
     {
       name: "Swaja Bajaj",
       profession: "Senior HR, Blitz",
       image: "https://randomuser.me/api/portraits/women/8.jpg",
       testimonial:
-        "Thank you for helping us find the ideal office space! Spaceify's team was professional, supportive, and made the process smooth and stress-free. We truly appreciated the attention to detail and dedication throughout.",
+        "I just wanted to take a moment to sincerely thank you for all your help in finding the best Office space for us. Your expertise and dedication made the entire process seamless, and we truly appreciate the effort pu and ymr team put in.Your team has been incredibly understanding and supportive throughout, ensuring that every detail was taken care of while finahzing the deal- Its been a pleasure working with you. and were grateful for your professionalism and commitment-Looking forward to staying touch and working together again in the future",
     },
     {
       name: "Suraj Sharma",
       profession: "Senior Admin and Facilities, Xoxoday",
       image: "https://randomuser.me/api/portraits/men/9.jpg",
       testimonial:
-        "Partnering with Spaceify completely transformed our office space search. They guided us every step of the way and helped us secure a workspace that fits our brand and team culture perfectly.",
+        "Partnering with Spaceify completely transformed our search for the right office space. Their team was incredibly attentive and professional, guiding us through every step—from understanding our requirements to securing a space that fits our brand and work style. They didn’t just find us a place to work; they helped us create an environment where our team can thrive. We’re beyond satisfied with the results and would strongly recommend Spaceify to any business looking for their next workspace.",
     },
     
   ];

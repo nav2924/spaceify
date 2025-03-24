@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
-import { LineShadowText } from "./magicui/line-shadow-text";
 
 const logos = [
   "icons/arcana.png",
@@ -21,10 +20,7 @@ const Clients = () => {
   return (
     <section className="bg-dark py-16">
       <h2 className="text-balance  font-semibold leading-none text-white tracking-tighter  text-6xl flex items-center justify-center p-10 gap-x-2">
-        Our Valuable{   }
-        <LineShadowText className="italic" shadowColor={shadowColor}>
-          Clients
-        </LineShadowText>
+        Our Valuable Clients
       </h2>
       <div className="max-w-xl mx-auto  bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 shadow-lg rounded-2xl p-6 border border-gray-200">
         <p className="text-gray-600 text-center">
