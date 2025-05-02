@@ -58,7 +58,7 @@ const Enquiry = () => {
 
   return (
     <>
-      <section className="relative z-10 overflow-hidden bg-[#121E53] px-4 py-20 lg:py-[120px]">
+      <section className="relative z-10 overflow-hidden bg-[#121E53] px-4 py-20 lg:py-[120px]" id="enquiry">
         <h2 className="text-white text-3xl font-bold text-center pb-10">
           Enquire Us
         </h2>
