@@ -28,18 +28,23 @@ const About = () => {
             alt="Real Estate Team"
             className="min-w-16 md:w-[55%] h-96  rounded-lg object-cover shadow-lg"
           />
-          <div className="bg-slate-700 p-8 rounded-lg w-full md:w-[45%] text-center md:text-left shadow-md">
+          <section
+            className="bg-slate-700 p-8 rounded-lg w-full md:w-[45%] text-center md:text-left shadow-md"
+            aria-label="Company Overview"
+          >
             <h2 className="text-xl md:text-2xl font-semibold mb-4">
               Your Trusted Partner in Real Estate Solutions
             </h2>
             <p className="mb-6 text-sm md:text-base leading-relaxed md:leading-loose bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">
-              Our mission is to simplify the real estate process. We offer
-              data-driven insights and innovative technology to help clients
-              make informed decisions, whether they're buying, selling, or
-              investing in properties. From personalized recommendations to
-              on-demand support, we empower you every step of the way.
+              At <strong>Spaceify</strong>, we simplify the{" "}
+              <strong>real estate</strong> journey with data-driven insights and
+              innovative technology. Whether you're looking to{" "}
+              <strong>buy</strong>,<strong>sell</strong>, or{" "}
+              <strong>invest in property</strong>, our personalized
+              recommendations and on-demand support will guide you every step of
+              the way.
             </p>
-          </div>
+          </section>
         </div>
         {/* Stats */}
         <section className="py-20">

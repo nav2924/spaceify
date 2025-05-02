@@ -22,16 +22,21 @@ const Clients = () => {
       <h2 className="text-balance  font-semibold leading-none text-white tracking-tighter  text-6xl flex items-center justify-center p-10 gap-x-2">
         Our Valuable Clients
       </h2>
-      <div className="max-w-xl mx-auto  bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 shadow-lg rounded-2xl p-6 border border-gray-200">
-        <p className="text-gray-600 text-center">
-          Our goal is to streamline the real estate journey. Through
-          data-powered insights and cutting-edge technology, we equip our
-          clients with the tools they need to make confident choices—whether
-          they're purchasing, selling, or investing in real estate. From
-          tailored advice to responsive assistance, we support you at every
-          stage.
+      <section
+        aria-label="Company Mission"
+        className="max-w-xl mx-auto bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 shadow-lg rounded-2xl p-6 border border-gray-200"
+      >
+        <p className="text-gray-700 text-center text-base md:text-lg leading-relaxed">
+          At <strong>Spaceify</strong>, our mission is to streamline the{" "}
+          <strong>real estate journey</strong> through{" "}
+          <strong>data-powered insights</strong> and{" "}
+          <strong>cutting-edge technology</strong>. We empower clients with the
+          knowledge and tools to make confident decisions—whether they're{" "}
+          <strong>buying</strong>, <strong>selling</strong>, or{" "}
+          <strong>investing in property</strong>. From personalized guidance to
+          responsive support, Spaceify is with you every step of the way.
         </p>
-      </div>
+      </section>
 
       <div className="relative overflow-hidden bg-background py-12">
         <motion.div
